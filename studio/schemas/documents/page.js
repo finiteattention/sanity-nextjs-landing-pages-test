@@ -19,7 +19,9 @@ export default {
       type: 'array',
       title: 'Page sections',
       of: [
+        { type: 'pageIntro' },
         { type: 'hero' },
+        { type: 'submit' },
         { type: 'imageSection' },
         { type: 'mailchimp' },
         { type: 'textSection' },

@@ -11,6 +11,7 @@ import siteConfig from './documents/siteConfig';
 
 // Object types
 import cta from './objects/cta';
+import cta2 from './objects/cta2'
 import embedHTML from './objects/embedHTML';
 import figure from './objects/figure';
 import internalLink from './objects/internalLink';
@@ -19,7 +20,9 @@ import portableText from './objects/portableText';
 import simplePortableText from './objects/simplePortableText';
 
 // Landing page sections
+import pageIntro from './objects/pageIntro';
 import hero from './objects/hero';
+import submit from './objects/submit';
 import imageSection from './objects/imageSection';
 import mailchimp from './objects/mailchimp';
 import textSection from './objects/textSection';
@@ -31,6 +34,7 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     cta,
+    cta2,
     embedHTML,
     figure,
     hero,
@@ -39,10 +43,12 @@ export default createSchema({
     link,
     mailchimp,
     page,
+    pageIntro,
     portableText,
     route,
     simplePortableText,
     siteConfig,
+    submit,
     textSection,
   ]),
 });
