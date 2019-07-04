@@ -25,18 +25,26 @@ function Hero (props) {
 
   return (
     <div className={styles.root} style={style}>
-      <div className={styles.content}>
-        <h1 className={styles.title}>{heading}</h1>
-        <div className={styles.tagline}>{tagline && <SimpleBlockContent blocks={tagline} />}</div>
-        {ctas && (
-          <div className={styles.ctas}>
-            {ctas.map(cta => (
-              <Cta2 {...cta} key={cta._key} />
-            ))},
-          </div>
-        )}
-      </div>
+  <div className={styles.content}>
+    <h1 className={styles.title}>{heading}</h1>
+    <div className={styles.tagline}>
+      {tagline && <SimpleBlockContent blocks={tagline} />}
     </div>
+    {ctas && (
+      <div className={styles.ctas}>
+        {ctas.map(cta => {
+          if (cta._type == 'cta') {
+            return <Cta {...cta} key={cta._key} />
+          }
+          if (cta._type == 'cta2') {
+            return <Cta2 {...cta} key={cta._key} />
+          }
+          return undefined
+        })},
+      </div>
+    )}
+  </div>
+</div>
   )
 }
 
