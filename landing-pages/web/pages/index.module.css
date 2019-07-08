@@ -1,0 +1,12 @@
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+
+.content {
+    width: 100%;
+    max-width: 40em;
+    max-width: var(--width-small);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+  }
+  
