@@ -77,6 +77,18 @@ export default {
       ],
     },
     {
+      title: 'Experimental page preview',
+      name: 'pagePreview',
+      description: 'Select pages to preview on front page',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'route' }],
+        },
+      ],
+    },
+    {
       title: 'Footer navigation items',
       name: 'footerNavigation',
       type: 'array',

@@ -1,0 +1,23 @@
+*[_id == "4ee63532-dd4f-4bae-b43a-0117a34f7bcf"]{
+	...,
+  content[]{
+    ...,
+    _type == "submit" => {
+    	  ctas[]{
+          ...,
+          route->
+        }
+  	}
+  }
+}
+
+*[_id == "global-config"]{ //filters out everything that doesn't have ID = global config
+  title, // get its title
+  "sections": mainNavigation[]->{ // let's make a key called "section", which has value [contents of the "mainNav" field], go get any refs for each item
+    slug, // projection: return slug 
+    page->{ // projection: return the page content (go get that)
+     title, // specifically the page title 
+     content // and the page content
+  }
+  }
+}
